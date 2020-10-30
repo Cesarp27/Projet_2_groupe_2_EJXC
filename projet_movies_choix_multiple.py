@@ -42,7 +42,7 @@ def ne_dans_lannée():
     
     
     # demande de taper la valeur
-    title = input("year?: ")
+    title = input("year? ")
 
     print("vous avez tapé:", title)
 
