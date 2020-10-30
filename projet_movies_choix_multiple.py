@@ -11,8 +11,8 @@ import pandas as pd
 from sqlalchemy import create_engine
 import config
 
-#server = "127.0.0.1" 
-server = "datalab-mame.myconnectech.fr"
+server = "127.0.0.1" 
+#server = "datalab-mame.myconnectech.fr"
 BDname="grp_movies2"
 
 # connection à mySQL sur le serveur
@@ -31,13 +31,22 @@ def Top_20():
     print(df)
 
 def ne_dans_lannée():
+    # Il est nécessaire de modifier ce code pour ne montrer que les acteurs, 
+    # actuellement il montre tous les personnages qui sont nés cette année-là
+ 
+    sql2 = 'SELECT DISTINCT birthYear FROM name_basics ORDER BY `name_basics`.`birthYear` ASC;' 
+
+    # Execution de la requète & récupération dans une dataFrame (pandas)
+    df2 = pd.read_sql(sql2, cnx)
+    print(df2)
+    
     
     # demande de taper la valeur
-    title = input("year ?")
+    title = input("year?: ")
 
     print("vous avez tapé:", title)
 
-    sql = 'SELECT primaryName FROM `name_basics` WHERE deathYear ="' + title + '";' 
+    sql = 'SELECT primaryName FROM `name_basics` WHERE birthYear ="' + title + '";' 
 
     print("SQL:", sql)
 
