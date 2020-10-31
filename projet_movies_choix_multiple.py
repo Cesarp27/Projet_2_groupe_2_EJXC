@@ -9,14 +9,14 @@ Created on Tue Oct 27 21:26:23 2020
 #imports
 import pandas as pd
 from sqlalchemy import create_engine
-import config
+
 
 server = "127.0.0.1" 
 #server = "datalab-mame.myconnectech.fr"
 BDname="grp_movies2"
 
 # connection à mySQL sur le serveur
-cnx = create_engine('mysql+pymysql://' + config.user + ':' + config.password + '@' + server + '/' + BDname).connect()
+cnx = create_engine('mysql+pymysql://reader:Reader@2020@' + server + '/' + BDname).connect()
  
 print("Recherche dans la BDD")
 
