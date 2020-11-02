@@ -14,6 +14,7 @@ from sqlalchemy import create_engine
 server = "127.0.0.1" 
 #server = "datalab-mame.myconnectech.fr"
 BDname="grp_movies2"
+#BDname="bdd_cparra"
 
 # connection à mySQL sur le serveur
 cnx = create_engine('mysql+pymysql://reader:Reader@2020@' + server + '/' + BDname).connect()
