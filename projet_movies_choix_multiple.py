@@ -32,7 +32,7 @@ def Top_20():
     print(df)
 
 def ne_dans_lannée():
-    # Il est nécessaire de modifier ce code pour ne montrer que les acteurs, 
+    # Il est nécessaire de modifier ce code pour ne montrer que les acteurs
     # actuellement il montre tous les personnages qui sont nés cette année-là
  
     sql2 = 'SELECT DISTINCT birthYear FROM name_basics ORDER BY `name_basics`.`birthYear` ASC;' 
