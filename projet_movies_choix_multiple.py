@@ -18,7 +18,9 @@ BDname="grp_movies2"
 
 # connection à mySQL sur le serveur
 cnx = create_engine('mysql+pymysql://reader:Reader@2020@' + server + '/' + BDname).connect()
- 
+#cnx = create_engine("mysql+pymysql://{user}:{password}@{server}/{db}".format(user=reader, password=Reader@2020@, server=server, db=BDname)).connect()
+ #vérifiez les instructions ci-dessus
+
 print("Recherche dans la BDD")
 
 def Top_20():
@@ -45,12 +47,10 @@ def ne_dans_lannée():
     # demande de taper la valeur
     title = input("year? ")
 
-    print("vous avez tapé:", title)
-
     sql = 'SELECT primaryName FROM `name_basics` WHERE birthYear ="' + title + '";' 
 
     print("SQL:", sql)
-
+    print("Acteurs nés dans l'année:", title)
     # Execution de la requète & récupération dans une dataFrame (pandas)
     df = pd.read_sql(sql, cnx)
     print(df)
