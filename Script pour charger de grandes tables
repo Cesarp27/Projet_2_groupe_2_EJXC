@@ -1,0 +1,57 @@
+SET UNIQUE_CHECKS=0;
+SET FOREIGN_KEY_CHECKS=0;
+
+truncate TABLE `name_basics`;
+LOAD DATA LOCAL INFILE 'name.basics.tsv'
+INTO TABLE `name_basics`
+FIELDS TERMINATED BY '\t' ENCLOSED BY ''
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
+
+truncate TABLE `title_basics`;
+LOAD DATA LOCAL INFILE 'title.basics.tsv'
+INTO TABLE `title_basics`
+FIELDS TERMINATED BY '\t' ENCLOSED BY ''
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
+
+truncate TABLE `title_principals`;
+LOAD DATA LOCAL INFILE 'title.principals.tsv'
+INTO TABLE `title_principals`
+FIELDS TERMINATED BY '\t' ENCLOSED BY ''
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
+
+truncate TABLE `title_akas`;
+LOAD DATA LOCAL INFILE 'title.akas.tsv'
+INTO TABLE `title_akas`
+FIELDS TERMINATED BY '\t' ENCLOSED BY ''
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
+
+truncate TABLE `title_episode`;
+LOAD DATA LOCAL INFILE 'title.episode.tsv'
+INTO TABLE `title_episode`
+FIELDS TERMINATED BY '\t' ENCLOSED BY ''
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
+
+truncate TABLE `title_ratings`;
+LOAD DATA LOCAL INFILE 'title.ratings.tsv'
+INTO TABLE `title_ratings`
+FIELDS TERMINATED BY '\t' ENCLOSED BY ''
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
+
+truncate TABLE `title_crew`;
+LOAD DATA LOCAL INFILE 'title.crew.tsv'
+INTO TABLE `title_crew`
+FIELDS TERMINATED BY '\t' ENCLOSED BY ''
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
+
+SET UNIQUE_CHECKS=1;
+SET FOREIGN_KEY_CHECKS=1;
+
+SELECT * FROM `name_basics` 
+LIMIT 5;
