@@ -104,3 +104,5 @@ while not sortir:
         print ("Entrez un nombre entre 1 et 3")
  
 print ("Fin")
+
+print("xavier    modif")
