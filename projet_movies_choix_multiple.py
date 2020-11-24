@@ -1,3 +1,11 @@
+####################################################################
+# C'était le premier squelette de code python que nous avons créé  #
+# avec l'intention de chacun des membres pouvoir le reprendre      #
+# et de commencer à faire leur propre exploration                  #
+####################################################################
+
+
+
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
@@ -54,12 +62,6 @@ def ne_dans_lannée():
     # Execution de la requète & récupération dans une dataFrame (pandas)
     df = pd.read_sql(sql, cnx)
     print(df)
-
-
-
-
-
-
 
 
 def demander_nombre_entier():
